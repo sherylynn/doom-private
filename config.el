@@ -25,13 +25,17 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
+;;
 ;;(setq doom-theme 'doom-one)
 (load-theme 'vscode-dark-plus t)
+
 ;; stop alert me about quit emacs
 (setq confirm-kill-emacs nil)
-;; set mouse for terminal
-(remove-hook 'tty-setup-hook #'xterm-mouse-mode)
-(xterm-mouse-mode -1)
+;;
+;; set mouse for terminal but lost mouse click
+;;(remove-hook 'tty-setup-hook #'xterm-mouse-mode)
+;;(xterm-mouse-mode -1)
+;;
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
@@ -53,6 +57,14 @@
      command)))
 
 (async-shell-command-no-window "git -C ~/.doom.d pull")
+;;
+;;
+;;
+(map! (:leader
+        (:desc "neotree" :g "1" #'neotree-toggle)
+        (:desc "org time stamp" :g "2" #'org-time-stamp)
+        (:desc "toggle terminal" :g "tt" #'+eshell/toggle)
+       ))
 ;;(async-shell-command-no-window "git -C ~/work pull")
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
