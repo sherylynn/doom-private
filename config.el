@@ -29,6 +29,9 @@
 (load-theme 'vscode-dark-plus t)
 ;; stop alert me about quit emacs
 (setq confirm-kill-emacs nil)
+;; set mouse for terminal
+(remove-hook 'tty-setup-hook #'xterm-mouse-mode)
+(xterm-mouse-mode -1)
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
