@@ -59,11 +59,28 @@
 (async-shell-command-no-window "git -C ~/.doom.d pull")
 ;;
 ;;
+;;  (let ((default-directory "~/.doom.d"))
+;;    (message (pwd))
+;;    (call-interactively #'magit-pull-from-upstream)
+;;    )
 ;;
+(defun checkbox-insert ()
+  "insert checkbox" ;;need desc
+  (interactive) ;;need interactive
+  (insert "- [ ]")
+  (evil-escape )
+  (org-update-checkbox-count-maybe )
+       )
+
+;;(checkbox-insert )
 (map! (:leader
         (:desc "neotree" :g "1" #'neotree-toggle)
         (:desc "org time stamp" :g "2" #'org-time-stamp)
         (:desc "toggle terminal" :g "tt" #'+eshell/toggle)
+        ;;(:desc "edit editor configure" :g "ee" #'evil-edit "~/.doom.d/config.el")
+        (:desc "edit editor configure" :g "zr" #'doom/reload)
+        (:desc "insert checkbox" :g "3" #'checkbox-insert )
+        (:desc "insert checkbox" :g "ic" #'checkbox-insert )
        ))
 ;;(async-shell-command-no-window "git -C ~/work pull")
 ;; Here are some additional functions/macros that could help you configure Doom:
