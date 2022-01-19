@@ -26,8 +26,8 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;;
-;;(setq doom-theme 'doom-one)
-(load-theme 'vscode-dark-plus t)
+(setq doom-theme 'doom-one)
+;;(load-theme 'vscode-dark-plus t)
 
 ;; stop alert me about quit emacs
 (setq confirm-kill-emacs nil)
@@ -71,13 +71,18 @@
   (evil-escape )
   (org-update-checkbox-count-maybe )
        )
-
+;;(find-file "~/.doom.d/init.el")
 ;;(checkbox-insert )
 (map! (:leader
         (:desc "neotree" :g "1" #'neotree-toggle)
         (:desc "org time stamp" :g "2" #'org-time-stamp)
         (:desc "toggle terminal" :g "tt" #'+eshell/toggle)
-        ;;(:desc "edit editor configure" :g "ee" #'evil-edit "~/.doom.d/config.el")
+        (:desc "edit editor configure" :g "ee"
+         (cmd! (find-file "~/.doom.d/config.el")))
+        (:desc "edit editor configure" :g "ze"
+         (cmd! (find-file "~/.doom.d/config.el")))
+        (:desc "edit editor configure" :g "zo"
+         (cmd! (find-file "~/work/todo.org")))
         (:desc "edit editor configure" :g "zr" #'doom/reload)
         (:desc "insert checkbox" :g "3" #'checkbox-insert )
         (:desc "insert checkbox" :g "ic" #'checkbox-insert )
