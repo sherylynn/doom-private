@@ -71,6 +71,14 @@
   (evil-escape )
   (org-update-checkbox-count-maybe )
        )
+(defun todo-insert ()
+  "insert todo" ;;need desc
+  (interactive) ;;need interactive
+  (org-insert-todo-heading t)
+  ;;(insert "TODO")
+  ;;(org-todo "t")
+  (org-update-checkbox-count-maybe )
+       )
 ;;(find-file "~/.doom.d/init.el")
 ;;(checkbox-insert )
 (map! (:leader
@@ -81,11 +89,12 @@
          (cmd! (find-file "~/.doom.d/config.el")))
         (:desc "edit editor configure" :g "ze"
          (cmd! (find-file "~/.doom.d/config.el")))
-        (:desc "edit editor configure" :g "zo"
+        (:desc "edit org mode file" :g "zo"
          (cmd! (find-file "~/work/todo.org")))
-        (:desc "edit editor configure" :g "zr" #'doom/reload)
-        (:desc "insert checkbox" :g "3" #'checkbox-insert )
+        (:desc "reload editor configure" :g "zr" #'doom/reload)
+        (:desc "insert todo" :g "3" #'todo-insert )
         (:desc "insert checkbox" :g "ic" #'checkbox-insert )
+        (:desc "insert todo" :g "it" #'todo-insert )
        ))
 ;;(async-shell-command-no-window "git -C ~/work pull")
 ;; Here are some additional functions/macros that could help you configure Doom:
