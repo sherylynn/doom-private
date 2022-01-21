@@ -71,6 +71,11 @@
   (evil-escape )
   (org-update-checkbox-count-maybe )
        )
+(defun insert-now-time()
+  "insert now time"
+  (interactive)
+  (org-time-stamp-inactive "HH:MM")
+  )
 (defun todo-insert ()
   "insert todo" ;;need desc
   (interactive) ;;need interactive
@@ -95,6 +100,7 @@
         (:desc "insert todo" :g "3" #'todo-insert )
         (:desc "insert checkbox" :g "ic" #'checkbox-insert )
         (:desc "insert todo" :g "it" #'todo-insert )
+        (:desc "insert now time" :g "in" #'insert-now-time )
        ))
 ;;(async-shell-command-no-window "git -C ~/work pull")
 ;; Here are some additional functions/macros that could help you configure Doom:
