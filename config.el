@@ -40,7 +40,10 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
 ;;(setq default-input-method "rime")
-(setq rime-show-candidate 'posframe
+(setq rime-show-candidate 'minibuffer
+      ;;测试感觉还是minibuffer最快，cpu占用最小
+;;(setq rime-show-candidate 'popup
+;;(setq rime-show-candidate 'posframe
       rime-user-data-dir "~/rime")
 ;;rime-user-data-dir "~/storage/download/rime")
 ;;(setq default-input-method 'pyim
