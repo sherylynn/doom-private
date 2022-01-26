@@ -39,13 +39,16 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
-(setq default-input-method "rime"
-      rime-show-candidate 'posframe
+;;(setq default-input-method "rime")
+(setq rime-show-candidate 'posframe
       rime-user-data-dir "~/rime")
 ;;rime-user-data-dir "~/storage/download/rime")
-;;(setq default-input-method "pyim"
-;;      pyim-page-tooltip 'posframe)
-;;(pyim-default-scheme 'quanpin)
+;;(setq default-input-method 'pyim
+(setq pyim-page-tooltip 'posframe
+      pyim-default-scheme 'quanpin)
+;;(setq pyim-dicts
+;;      '((:name "sogou" :file "~/work/sogou.txt")
+;;        (:name "xunfei" :file "~/work/xunfei.txt")))
 ;;(pyim-basedict-enable)
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
