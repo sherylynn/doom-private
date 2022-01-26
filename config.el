@@ -26,8 +26,8 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;;
-(setq doom-theme 'doom-one)
-;;(load-theme 'vscode-dark-plus t)
+;;(setq doom-theme 'doom-one)
+(load-theme 'vscode-dark-plus t)
 
 ;; stop alert me about quit emacs
 (setq confirm-kill-emacs nil)
@@ -40,7 +40,13 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
 (setq default-input-method "rime"
-      rime-show-candidate 'posframe)
+      rime-show-candidate 'posframe
+      rime-user-data-dir "~/rime")
+;;rime-user-data-dir "~/storage/download/rime")
+;;(setq default-input-method "pyim"
+;;      pyim-page-tooltip 'posframe)
+;;(pyim-default-scheme 'quanpin)
+;;(pyim-basedict-enable)
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
