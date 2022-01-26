@@ -39,7 +39,8 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
-
+(setq default-input-method "rime"
+      rime-show-candidate 'posframe)
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
@@ -84,16 +85,21 @@
   ;;(org-todo "t")
   (org-update-checkbox-count-maybe )
        )
+(defun configure-emacs ()
+  "configure emacs"
+  (interactive)
+  (find-file "~/.doom.d/packages.el")
+  (find-file "~/.doom.d/init.el")
+  (find-file "~/.doom.d/config.el")
+  )
 ;;(find-file "~/.doom.d/init.el")
 ;;(checkbox-insert )
 (map! (:leader
         (:desc "neotree" :g "1" #'neotree-toggle)
         (:desc "org time stamp" :g "2" #'org-time-stamp)
         (:desc "toggle terminal" :g "tt" #'+eshell/toggle)
-        (:desc "edit editor configure" :g "ee"
-         (cmd! (find-file "~/.doom.d/config.el")))
-        (:desc "edit editor configure" :g "ze"
-         (cmd! (find-file "~/.doom.d/config.el")))
+        (:desc "edit editor configure" :g "ee" #'configure-emacs)
+        (:desc "edit editor configure" :g "ze" #'configure-emacs)
         (:desc "edit org mode file" :g "zo"
          (cmd! (find-file "~/work/todo.org")))
         (:desc "reload editor configure" :g "zr" #'doom/reload)
