@@ -26,8 +26,8 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;;
-;;(setq doom-theme 'doom-one)
-(load-theme 'vscode-dark-plus t)
+(setq doom-theme 'doom-one)
+;;(load-theme 'vscode-dark-plus t)
 
 ;; stop alert me about quit emacs
 (setq confirm-kill-emacs nil)
