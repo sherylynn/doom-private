@@ -106,7 +106,8 @@
 (map! (:leader
         (:desc "neotree" :g "1" #'neotree-toggle)
         (:desc "org time stamp" :g "2" #'org-time-stamp)
-        (:desc "toggle terminal" :g "tt" #'+eshell/toggle)
+        ;;(:desc "toggle terminal" :g "tt" #'+eshell/toggle)
+        (:desc "toggle terminal" :g "tt" #'vterm)
         (:desc "edit editor configure" :g "ee" #'configure-emacs)
         (:desc "edit editor configure" :g "ze" #'configure-emacs)
         (:desc "edit org mode file" :g "zo"
