@@ -1,5 +1,4 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
@@ -40,15 +39,22 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
 (setq default-input-method "rime")
-;;(setq rime-show-candidate 'minibuffer
 ;;测试感觉还是minibuffer最快，cpu占用最小
 ;;然后就是postframe排第二，arm会卡
 ;;效果最卡是popup，台式机上都卡
 ;;视觉最好是postframe，
-;;(setq rime-show-candidate 'popup
+;;(setq rime-show-candidate 'popup)
 ;;
-(setq rime-show-candidate 'posframe
-      rime-user-data-dir "~/rime")
+(setq rime-show-candidate 'posframe)
+(defun toggle-rime-show-candidate()
+  "toggle rime show candidate"
+  (interactive)
+  (if (equal rime-show-candidate 'posframe)
+      (setq rime-show-candidate 'minibuffer)
+    (setq rime-show-candidate 'posframe))
+  )
+(toggle-rime-show-candidate )
+(setq rime-user-data-dir "~/rime")
 ;;rime-user-data-dir "~/storage/download/rime")
 ;;(setq default-input-method 'pyim
 (setq pyim-page-tooltip 'posframe
@@ -93,6 +99,11 @@
   (interactive)
   (org-time-stamp-inactive "HH:MM")
   )
+(defun insert-now-schedule()
+  "insert now schedule"
+  (interactive)
+  (org-schedule "HH:MM")
+  )
 (defun todo-insert ()
   "insert todo" ;;need desc
   (interactive) ;;need interactive
@@ -115,6 +126,7 @@
         (:desc "org time stamp" :g "2" #'org-time-stamp)
         ;;(:desc "toggle terminal" :g "tt" #'+eshell/toggle)
         (:desc "toggle terminal" :g "tt" #'+vterm/toggle)
+        (:desc "toggle rime show" :g "ts" #'toggle-rime-show-candidate)
         (:desc "edit editor configure" :g "ee" #'configure-emacs)
         (:desc "edit editor configure" :g "ze" #'configure-emacs)
         (:desc "edit org mode file" :g "zo"
