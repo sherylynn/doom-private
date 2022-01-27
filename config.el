@@ -39,11 +39,15 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
-;;(setq default-input-method "rime")
-(setq rime-show-candidate 'minibuffer
-      ;;测试感觉还是minibuffer最快，cpu占用最小
+(setq default-input-method "rime")
+;;(setq rime-show-candidate 'minibuffer
+;;测试感觉还是minibuffer最快，cpu占用最小
+;;然后就是postframe排第二，arm会卡
+;;效果最卡是popup，台式机上都卡
+;;视觉最好是postframe，
 ;;(setq rime-show-candidate 'popup
-;;(setq rime-show-candidate 'posframe
+;;
+(setq rime-show-candidate 'posframe
       rime-user-data-dir "~/rime")
 ;;rime-user-data-dir "~/storage/download/rime")
 ;;(setq default-input-method 'pyim
@@ -116,6 +120,7 @@
         (:desc "edit org mode file" :g "zo"
          (cmd! (find-file "~/work/todo.org")))
         (:desc "reload editor configure" :g "zr" #'doom/reload)
+        (:desc "edit editor configure" :g "zf" #'magit-pull-from-upstream)
         (:desc "insert todo" :g "3" #'todo-insert )
         (:desc "insert checkbox" :g "ic" #'checkbox-insert )
         (:desc "insert todo" :g "it" #'todo-insert )
