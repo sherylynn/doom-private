@@ -7,8 +7,8 @@
 
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
-;(package! some-package)
-(package! vscode-dark-plus-theme)
+;;(package! some-package)
+;;;(package! vscode-dark-plus-theme)
 (package! rime)
 ;;termux 只能在第一次的package-install时候使用pyim
 ;;第二次打开就会打不开了,不论是package! 还是 !chinese
