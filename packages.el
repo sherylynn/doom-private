@@ -13,7 +13,7 @@
 ;;termux 只能在第一次的package-install时候使用pyim
 ;;第二次打开就会打不开了,不论是package! 还是 !chinese
 ;;(package! pyim)
-(package! pyim-basedict)
+;;(package! pyim-basedict)
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
 ;; https://github.com/raxod502/straight.el#the-recipe-format
