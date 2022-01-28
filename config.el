@@ -53,7 +53,6 @@
       (setq rime-show-candidate 'minibuffer)
     (setq rime-show-candidate 'posframe))
   )
-(toggle-rime-show-candidate )
 (setq rime-user-data-dir "~/rime")
 ;;rime-user-data-dir "~/storage/download/rime")
 ;;(setq default-input-method 'pyim
