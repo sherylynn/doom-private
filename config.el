@@ -25,8 +25,15 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;;
-(setq doom-theme 'doom-one)
+;;(setq doom-theme 'doom-one) no tabs
+;;(setq doom-theme 'doom-one-light);; too light
+;;(setq doom-theme 'doom-monokai-pro) ;;no tabs
+;;(setq doom-theme 'doom-solarized-dark);;no tabs
+;;(setq doom-theme 'doom-solarized-light);;no tabs
+(setq doom-theme 'doom-dark+)
 ;;(load-theme 'vscode-dark-plus t)
+;;(setq doom-theme 'doom-material) ;; lack of js syntax
+;;(setq doom-theme 'doom-oceanic-next) ;;ugly
 
 ;; stop alert me about quit emacs
 (setq confirm-kill-emacs nil)
