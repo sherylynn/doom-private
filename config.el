@@ -7,7 +7,8 @@
 ;; clients, file templates and snippets.
 (setq user-full-name "sherylynn"
       user-mail-address "sherylynn@qq.com")
-
+(setq max-lisp-eval-depth 10000)
+(setq max-specpdl-size 10000)
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
