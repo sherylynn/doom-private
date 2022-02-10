@@ -43,6 +43,12 @@
 ;;(remove-hook 'tty-setup-hook #'xterm-mouse-mode)
 ;;(xterm-mouse-mode -1)
 ;;
+;;Mouse scrolling in terminal
+(unless (display-graphic-p)
+        (xterm-mouse-mode 1)
+        (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
+        (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
+  )
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
