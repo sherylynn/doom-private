@@ -59,6 +59,10 @@
 ;;视觉最好是postframe，
 ;;(setq rime-show-candidate 'popup)
 ;;
+(when (file-exists-p "/home/linuxbrew")
+  (setq rime-emacs-module-header-root
+        "/home/linuxbrew/.linuxbrew/include"
+        ))
 (setq rime-show-candidate 'posframe)
 (defun toggle-rime-show-candidate()
   "toggle rime show candidate"
