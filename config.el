@@ -149,6 +149,7 @@
         (:desc "edit org mode file" :g "zo"
          (cmd! (find-file "~/work/todo.org")))
         (:desc "reload editor configure" :g "zr" #'doom/reload)
+        (:desc "show todo tree" :g "zt" #'org-show-todo-tree)
         (:desc "edit editor configure" :g "zf" #'magit-pull-from-upstream)
         (:desc "insert todo" :g "3" #'todo-insert )
         (:desc "insert checkbox" :g "ic" #'checkbox-insert )
