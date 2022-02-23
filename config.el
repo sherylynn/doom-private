@@ -54,6 +54,7 @@
 (setq org-directory "~/work/")
 (setq default-input-method "rime")
 ;;(set-input-method "rime")
+;;手动set一下才没有问题？native版本离谱
 (setq
  warning-suppress-log-types '((org-element-cache)))
 ;;测试感觉还是minibuffer最快，cpu占用最小
