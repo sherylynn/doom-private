@@ -52,7 +52,7 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
-(setq default-input-method "rime")
+;;(setq default-input-method "rime")
 ;;测试感觉还是minibuffer最快，cpu占用最小
 ;;然后就是postframe排第二，arm会卡
 ;;效果最卡是popup，台式机上都卡
