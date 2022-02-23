@@ -53,7 +53,6 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
 (setq default-input-method "rime")
-;;(set-input-method "rime")
 ;;手动set一下才没有问题？native版本离谱
 (setq
  warning-suppress-log-types '((org-element-cache)))
@@ -120,6 +119,11 @@
   (interactive)
   (org-time-stamp-inactive "HH:MM")
   )
+(defun set-input-method-rime()
+  "set input method rime"
+  (interactive)
+  (set-input-method 'rime)
+  )
 (defun insert-now-schedule()
   "insert now schedule"
   (interactive)
@@ -148,6 +152,7 @@
         ;;(:desc "toggle terminal" :g "tt" #'+eshell/toggle)
         (:desc "toggle terminal" :g "tt" #'+vterm/toggle)
         (:desc "toggle rime show" :g "ts" #'toggle-rime-show-candidate)
+        (:desc "turn on rime input method" :g "ti" #'set-input-method-rime)
         (:desc "edit editor configure" :g "ee" #'configure-emacs)
         (:desc "edit editor configure" :g "ze" #'configure-emacs)
         (:desc "edit org mode file" :g "zo"
