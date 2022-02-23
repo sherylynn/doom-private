@@ -53,6 +53,7 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
 (setq default-input-method "rime")
+;;(set-input-method "rime")
 (setq
  warning-suppress-log-types '((org-element-cache)))
 ;;测试感觉还是minibuffer最快，cpu占用最小
