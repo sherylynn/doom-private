@@ -10,7 +10,7 @@
 ;;(package! some-package)
 ;;;(package! vscode-dark-plus-theme)
 (package! rime)
-;;(package! rime)
+(package! pangu-spacing)
 ;;termux 只能在第一次的package-install时候使用pyim
 ;;第二次打开就会打不开了,不论是package! 还是 !chinese
 ;;(package! pyim)

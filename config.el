@@ -53,6 +53,8 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
 (setq default-input-method "rime")
+(global-pangu-spacing-mode 1)
+(setq pangu-spacing-real-insert-separtor t)
 ;;手动set一下才没有问题？native版本离谱
 (setq
  warning-suppress-log-types '((org-element-cache)))
