@@ -9,10 +9,10 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;;(package! some-package)
 ;;;(package! vscode-dark-plus-theme)
-(package! rime)
-(package! pangu-spacing)
-;;termux 只能在第一次的package-install时候使用pyim
-;;第二次打开就会打不开了,不论是package! 还是 !chinese
+;;(package! rime)
+;;(package! pangu-spacing)
+;;termux 只能在第一次的 package-install 时候使用 pyim
+;;第二次打开就会打不开了,不论是 package! 还是 !chinese
 ;;(package! pyim)
 ;;(package! pyim-basedict)
 ;; To install a package directly from a remote git repo, you must specify a
