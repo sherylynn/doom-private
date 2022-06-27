@@ -9,12 +9,16 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;;(package! some-package)
 ;;;(package! vscode-dark-plus-theme)
-;;(package! rime)
-;;(package! pangu-spacing)
+(package! rime)
+(package! pangu-spacing)
 ;;termux 只能在第一次的 package-install 时候使用 pyim
 ;;第二次打开就会打不开了,不论是 package! 还是 !chinese
 ;;(package! pyim)
+;;(package! liberime)
 ;;(package! pyim-basedict)
+;;sis 需要比较麻烦的按每个系统进行配置和选择，且 wsl 模式不一定合适
+;;方便的地方就是确实可以选择原生版本的输入法
+;;(package! sis)
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
 ;; https://github.com/raxod502/straight.el#the-recipe-format

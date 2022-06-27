@@ -55,13 +55,13 @@
 (setq default-input-method "rime")
 (global-pangu-spacing-mode 1)
 (setq pangu-spacing-real-insert-separtor t)
-;;手动set一下才没有问题？native版本离谱
+;;手动 set 一下才没有问题？native 版本离谱
 (setq
  warning-suppress-log-types '((org-element-cache)))
-;;测试感觉还是minibuffer最快，cpu占用最小
-;;然后就是postframe排第二，arm会卡
-;;效果最卡是popup，台式机上都卡
-;;视觉最好是postframe，
+;;测试感觉还是 minibuffer 最快，cpu 占用最小
+;;然后就是 postframe 排第二，arm 会卡
+;;效果最卡是 popup，台式机上都卡
+;;视觉最好是 postframe，
 ;;(setq rime-show-candidate 'popup)
 ;;
 (when (file-exists-p "/home/linuxbrew")
@@ -79,8 +79,10 @@
 (setq rime-user-data-dir "~/rime")
 ;;rime-user-data-dir "~/storage/download/rime")
 ;;(setq default-input-method 'pyim
-(setq pyim-page-tooltip 'posframe
-      pyim-default-scheme 'quanpin)
+(setq pyim-page-tooltip 'posframe )
+(with-eval-after-load "liberime"
+  (liberime-try-select-schema "luna_pinyin_simp")
+  (setq pyim-default-scheme 'rime-quanpin))
 ;;(setq pyim-dicts
 ;;      '((:name "sogou" :file "~/work/sogou.txt")
 ;;        (:name "xunfei" :file "~/work/xunfei.txt")))
