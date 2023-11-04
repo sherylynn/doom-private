@@ -64,6 +64,7 @@
 ;;视觉最好是 postframe，
 ;;(setq rime-show-candidate 'popup)
 ;;
+;;
 (when (file-exists-p "/home/linuxbrew")
   (setq rime-emacs-module-header-root
         "/home/linuxbrew/.linuxbrew/include"

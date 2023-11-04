@@ -9,7 +9,15 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;;(package! some-package)
 ;;;(package! vscode-dark-plus-theme)
-(package! rime)
+(if (equal
+     (shell-command-to-string "platform") "macos")
+    ;;should set toolsinit bash to echo -n to cut \n
+        (use-package rime
+        :custom
+        (rime-librime-root "~/tools/emacs/librime/dist")
+        )
+        (package! rime)
+    )
 (package! pangu-spacing)
 ;;termux 只能在第一次的 package-install 时候使用 pyim
 ;;第二次打开就会打不开了,不论是 package! 还是 !chinese
