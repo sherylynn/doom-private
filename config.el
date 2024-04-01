@@ -153,7 +153,9 @@
 ;;(find-file "~/.doom.d/init.el")
 ;;(checkbox-insert )
 (map! (:leader
-        (:desc "neotree" :g "1" #'neotree-toggle)
+        ;;(:desc "neotree" :g "1" #'neotree-toggle)
+        ;;缺少 all-icon 所以 neotree 不知道用不了
+        (:desc "treemacs" :g "1" #'treemacs)
         (:desc "org time stamp" :g "2" #'org-time-stamp)
         ;;(:desc "toggle terminal" :g "tt" #'+eshell/toggle)
         (:desc "toggle terminal" :g "tt" #'+vterm/toggle)

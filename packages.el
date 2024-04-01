@@ -9,16 +9,16 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;;(package! some-package)
 ;;;(package! vscode-dark-plus-theme)
-(if (equal
-     (shell-command-to-string "platform") "macos")
+;;(if (equal
+     ;;(shell-command-to-string "platform") "macos")
     ;;should set toolsinit bash to echo -n to cut \n
-        (use-package rime
-        :custom
-        (rime-librime-root "~/tools/emacs/librime/dist")
-        )
-        (package! rime)
+        ;;(use-package rime
+        ;;:custom
+        ;;(rime-librime-root "~/tools/emacs/librime/dist")
+        ;;)
+        ;;(package! rime)
 
-    )
+    ;;)
 ;;(if (equal
 ;;     (shell-command-to-string "platform") "linux")
 ;;        (package! rime)
