@@ -23,6 +23,7 @@
 ;;     (shell-command-to-string "platform") "linux")
 ;;        (package! rime)
 ;;    )
+(package! all-the-icons)
 (package! pangu-spacing)
 ;;termux 只能在第一次的 package-install 时候使用 pyim
 ;;第二次打开就会打不开了,不论是 package! 还是 !chinese
