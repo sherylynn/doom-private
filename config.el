@@ -78,6 +78,7 @@
     (setq rime-show-candidate 'posframe))
   )
 (setq rime-user-data-dir "~/rime")
+(setq rime-share-data-dir "~/rime")
 ;;rime-user-data-dir "~/storage/download/rime")
 ;;(setq default-input-method 'pyim
 (setq pyim-page-tooltip 'posframe )
