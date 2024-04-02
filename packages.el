@@ -25,9 +25,15 @@
 ;;    )
 (package! all-the-icons)
 (package! pangu-spacing)
+(package! posframe)
+(package! pyim-tsinghua-dict
+  :recipe (:host github :repo "redguardtoo/pyim-tsinghua-dict")
+  )
+;;
 ;;termux 只能在第一次的 package-install 时候使用 pyim
 ;;第二次打开就会打不开了,不论是 package! 还是 !chinese
 ;;(package! pyim)
+;;(package! pyim-tsinghua-dict)
 ;;(package! liberime)
 ;;(package! pyim-basedict)
 ;;sis 需要比较麻烦的按每个系统进行配置和选择，且 wsl 模式不一定合适

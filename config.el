@@ -52,7 +52,7 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/work/")
-(setq default-input-method "rime")
+;;(setq default-input-method "rime")
 (global-pangu-spacing-mode 1)
 (setq pangu-spacing-real-insert-separtor t)
 ;;手动 set 一下才没有问题？native 版本离谱
@@ -80,14 +80,16 @@
 (setq rime-user-data-dir "~/rime")
 (setq rime-share-data-dir "~/rime")
 ;;rime-user-data-dir "~/storage/download/rime")
-;;(setq default-input-method 'pyim
+(setq default-input-method 'pyim)
 (setq pyim-page-tooltip 'posframe )
+;;(pyim-tsinghua-dict-enable)
+;；
 (with-eval-after-load "liberime"
   (liberime-try-select-schema "luna_pinyin_simp")
   (setq pyim-default-scheme 'rime-quanpin))
-;;(setq pyim-dicts
-;;      '((:name "sogou" :file "~/work/sogou.txt")
-;;        (:name "xunfei" :file "~/work/xunfei.txt")))
+(setq pyim-dicts
+      '((:name "tsinghua" :file "~/.emacs_doom/.local/straight/repos/pyim-tsinghua-dict/pyim-tsinghua-dict.pyim")
+        ))
 ;;(pyim-basedict-enable)
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
