@@ -80,17 +80,22 @@
 (setq rime-user-data-dir "~/rime")
 (setq rime-share-data-dir "~/rime")
 ;;rime-user-data-dir "~/storage/download/rime")
-(setq default-input-method 'pyim)
-(setq pyim-page-tooltip 'posframe )
-;;(pyim-tsinghua-dict-enable)
-;；
+;;
 (with-eval-after-load "liberime"
   (liberime-try-select-schema "luna_pinyin_simp")
   (setq pyim-default-scheme 'rime-quanpin))
-(setq pyim-dicts
-      '((:name "tsinghua" :file "~/.emacs_doom/.local/straight/repos/pyim-tsinghua-dict/pyim-tsinghua-dict.pyim")
-        ))
-;;(pyim-basedict-enable)
+(after! pyim
+  ;;加载用户词库
+  (setq pyim-dicts
+    '((:name "tsinghua" :file "~/.emacs.d_doom/.local/straight/repos/pyim-tsinghua-dict/pyim-tsinghua-dict.pyim")
+     ))
+  ;;(pyim-basedict-enable)
+  (setq pyim-page-tooltip 'posframe )
+  (pyim-default-scheme 'quanpin)
+)
+(setq default-input-method 'pyim)
+;;(pyim-tsinghua-dict-enable)
+;;
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
