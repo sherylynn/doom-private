@@ -45,9 +45,11 @@
 ;;
 ;;Mouse scrolling in terminal
 (unless (display-graphic-p)
-        (xterm-mouse-mode 1)
-        (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
-        (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
+  (xterm-mouse-mode 1)
+  (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
+  (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
+  ;;关闭终端下 xclip－mode 以应对 termux 下 doom 会使用 termux－clipboard 导致终端无法粘贴
+  (xclip-mode 0)
   )
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -87,12 +89,12 @@
 (after! pyim
   ;;加载用户词库
   (setq pyim-dicts
-    '((:name "tsinghua" :file "~/.emacs.d_doom/.local/straight/repos/pyim-tsinghua-dict/pyim-tsinghua-dict.pyim")
-     ))
+        '((:name "tsinghua" :file "~/.emacs.d_doom/.local/straight/repos/pyim-tsinghua-dict/pyim-tsinghua-dict.pyim")
+          ))
   ;;(pyim-basedict-enable)
   (setq pyim-page-tooltip 'posframe )
   (pyim-default-scheme 'quanpin)
-)
+  )
 (setq default-input-method 'pyim)
 ;;(pyim-tsinghua-dict-enable)
 ;;
@@ -126,7 +128,7 @@
   (insert "- [ ]")
   (evil-escape )
   (org-update-checkbox-count-maybe )
-       )
+  )
 (defun insert-now-time()
   "insert now time"
   (interactive)
@@ -149,7 +151,7 @@
   ;;(insert "TODO")
   ;;(org-todo "t")
   (org-update-checkbox-count-maybe )
-       )
+  )
 (defun configure-emacs ()
   "configure emacs"
   (interactive)
@@ -160,25 +162,25 @@
 ;;(find-file "~/.doom.d/init.el")
 ;;(checkbox-insert )
 (map! (:leader
-        (:desc "neotree" :g "1" #'neotree-toggle)
-        ;;缺少 all-icon 所以 neotree 不知道用不了,treemacs 不会显示正常当前路径
-        ;;(:desc "treemacs" :g "1" #'treemacs)
-        (:desc "org time stamp" :g "2" #'org-time-stamp)
-        ;;(:desc "toggle terminal" :g "tt" #'+eshell/toggle)
-        (:desc "toggle terminal" :g "tt" #'+vterm/toggle)
-        (:desc "toggle rime show" :g "ts" #'toggle-rime-show-candidate)
-        (:desc "turn on rime input method" :g "ti" #'set-input-method-rime)
-        (:desc "edit editor configure" :g "e" #'configure-emacs)
-        (:desc "edit editor configure" :g "ze" #'configure-emacs)
-        (:desc "edit org mode file" :g "zo"
-         (cmd! (find-file "~/work/todo.org")))
-        (:desc "reload editor configure" :g "zr" #'doom/reload)
-        (:desc "show todo tree" :g "zt" #'org-show-todo-tree)
-        (:desc "edit editor configure" :g "zf" #'magit-pull-from-upstream)
-        (:desc "insert todo" :g "3" #'todo-insert )
-        (:desc "insert checkbox" :g "ic" #'checkbox-insert )
-        (:desc "insert todo" :g "it" #'todo-insert )
-        (:desc "insert now time" :g "in" #'insert-now-time )
+       (:desc "neotree" :g "1" #'neotree-toggle)
+       ;;缺少 all-icon 所以 neotree 不知道用不了,treemacs 不会显示正常当前路径
+       ;;(:desc "treemacs" :g "1" #'treemacs)
+       (:desc "org time stamp" :g "2" #'org-time-stamp)
+       ;;(:desc "toggle terminal" :g "tt" #'+eshell/toggle)
+       (:desc "toggle terminal" :g "tt" #'+vterm/toggle)
+       (:desc "toggle rime show" :g "ts" #'toggle-rime-show-candidate)
+       (:desc "turn on rime input method" :g "ti" #'set-input-method-rime)
+       (:desc "edit editor configure" :g "e" #'configure-emacs)
+       (:desc "edit editor configure" :g "ze" #'configure-emacs)
+       (:desc "edit org mode file" :g "zo"
+              (cmd! (find-file "~/work/todo.org")))
+       (:desc "reload editor configure" :g "zr" #'doom/reload)
+       (:desc "show todo tree" :g "zt" #'org-show-todo-tree)
+       (:desc "edit editor configure" :g "zf" #'magit-pull-from-upstream)
+       (:desc "insert todo" :g "3" #'todo-insert )
+       (:desc "insert checkbox" :g "ic" #'checkbox-insert )
+       (:desc "insert todo" :g "it" #'todo-insert )
+       (:desc "insert now time" :g "in" #'insert-now-time )
        ))
 ;;(async-shell-command-no-window "git -C ~/work pull")
 ;; Here are some additional functions/macros that could help you configure Doom:
