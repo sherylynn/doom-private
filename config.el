@@ -49,7 +49,10 @@
   (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
   (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
   ;;关闭终端下 xclip－mode 以应对 termux 下 doom 会使用 termux－clipboard 导致终端无法粘贴
-  (xclip-mode 0)
+  ;; (xclip-mode nil)
+  ;; 需要加载 hook
+  ;;(add-hook! 'after-init-hook (lambda() (xclip-mode -1)))
+  ;;hook 也无效，算拉还是用我自个的配制
   )
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
