@@ -51,7 +51,7 @@
   ;;关闭终端下 xclip－mode 以应对 termux 下 doom 会使用 termux－clipboard 导致终端无法粘贴
   ;; (xclip-mode nil)
   ;; 需要加载 hook
-  ;;(add-hook! 'after-init-hook (lambda() (xclip-mode -1)))
+  (add-hook! 'xclip-mode-hook (lambda() (xclip-mode -1)))
   ;;hook 也无效，算拉还是用我自个的配制
   )
 ;; If you use `org' and don't want your org files in the default location below,
@@ -167,9 +167,9 @@
 ;;(find-file "~/.doom.d/init.el")
 ;;(checkbox-insert )
 (map! (:leader
-       (:desc "neotree" :g "1" #'neotree-toggle)
+       ;;(:desc "neotree" :g "1" #'neotree-toggle)
        ;;缺少 all-icon 所以 neotree 不知道用不了,treemacs 不会显示正常当前路径
-       ;;(:desc "treemacs" :g "1" #'treemacs)
+       (:desc "treemacs" :g "1" #'treemacs)
        (:desc "org time stamp" :g "2" #'org-time-stamp)
        ;;(:desc "toggle terminal" :g "tt" #'+eshell/toggle)
        (:desc "toggle terminal" :g "tt" #'+vterm/toggle)
