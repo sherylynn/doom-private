@@ -51,8 +51,10 @@
   ;;关闭终端下 xclip－mode 以应对 termux 下 doom 会使用 termux－clipboard 导致终端无法粘贴
   ;; (xclip-mode nil)
   ;; 需要加载 hook
-  (add-hook! 'xclip-mode-hook (lambda() (xclip-mode -1)))
+  ;;(add-hook! 'xclip-mode-hook (lambda() (xclip-mode -1)))
   ;;hook 也无效，算拉还是用我自个的配制
+  ;;把傻逼默认的 hook 干掉
+  (remove-hook 'tty-setup-hook 'doom-init-clipboard-in-tty-emacs-h)
   )
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
