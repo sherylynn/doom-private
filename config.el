@@ -94,9 +94,11 @@
   (setq pyim-dicts
         '((:name "tsinghua" :file "~/.emacs.d_doom/.local/straight/repos/pyim-tsinghua-dict/pyim-tsinghua-dict.pyim")
           ))
-  ;;(pyim-basedict-enable)
+  (pyim-basedict-enable)
   (setq pyim-page-tooltip 'posframe )
-  (pyim-default-scheme 'quanpin)
+  ;;(pyim-default-scheme 'quanpin)
+  (require 'pyim-dregcache)
+  (setq pyim-dcache-backend 'pyim-dregcache)
   )
 (setq default-input-method 'pyim)
 ;;(pyim-tsinghua-dict-enable)
