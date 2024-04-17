@@ -93,17 +93,17 @@
   (setq pyim-default-scheme 'rime-quanpin))
 (after! pyim
   ;;加载用户词库
-  (setq pyim-dicts
-        '((:name "tsinghua" :file "~/.emacs.d_doom/.local/straight/repos/pyim-tsinghua-dict/pyim-tsinghua-dict.pyim")
-          ))
+  ;;(setq pyim-dicts
+  ;;'((:name "tsinghua" :file "~/.emacs.d_doom/.local/straight/repos/pyim-tsinghua-dict/pyim-tsinghua-dict.pyim")
+  ;;))
   (pyim-basedict-enable)
+  (pyim-tsinghua-dict-enable)
   (setq pyim-page-tooltip 'posframe )
   ;;(pyim-default-scheme 'quanpin)
   (require 'pyim-dregcache)
   (setq pyim-dcache-backend 'pyim-dregcache)
   )
 (setq default-input-method 'pyim)
-;;(pyim-tsinghua-dict-enable)
 ;;
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
