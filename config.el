@@ -177,7 +177,7 @@
        (:desc "toggle terminal" :g "tt" #'+vterm/toggle)
        (:desc "toggle rime show" :g "ts" #'toggle-rime-show-candidate)
        (:desc "turn on rime input method" :g "ti" #'set-input-method-rime)
-       (:desc "edit editor configure" :g "e" #'configure-emacs)
+       (:desc "exec" :g "x" #'execute-extended-command)
        (:desc "edit editor configure" :g "ze" #'configure-emacs)
        (:desc "edit org mode file" :g "zo"
               (cmd! (find-file "~/work/todo.org")))
