@@ -112,6 +112,7 @@
 (defun async-shell-command-no-window
     (command)
   (interactive)
+  (setq async-shell-command-buffer "new buffer")
   (let
       ((display-buffer-alist
         (list
@@ -122,6 +123,9 @@
      command)))
 
 (async-shell-command-no-window "git -C ~/.doom.d pull")
+(async-shell-command-no-window "git -C ~/.emacs.d_my pull")
+(async-shell-command-no-window "git -C ~/sh pull")
+(async-shell-command-no-window "git -C ~/work pull")
 ;;
 ;;
 ;;  (let ((default-directory "~/.doom.d"))
