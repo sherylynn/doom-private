@@ -214,6 +214,11 @@
        (:desc "find file" :g "SPC" #'projectile-find-file)
        ;;SPC gg
        (:desc "magit-status" :g "gg" #'magit-status)
+
+       ;;SPC -=
+       (:desc "font size decrease" :g "-" #'doom/decrease-font-size)
+       (:desc "font size increase" :g "=" #'doom/increase-font-size)
+
        ))
 ;;(async-shell-command-no-window "git -C ~/work pull")
 ;; Here are some additional functions/macros that could help you configure Doom:
