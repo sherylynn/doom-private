@@ -182,6 +182,7 @@
        (:desc "toggle rime show" :g "ts" #'toggle-rime-show-candidate)
        (:desc "turn on rime input method" :g "ti" #'set-input-method-rime)
        (:desc "exec" :g "x" #'execute-extended-command)
+
        ;;SPC z
        (:desc "edit editor configure" :g "ze" #'configure-emacs)
        (:desc "edit org mode file" :g "zo"
@@ -190,15 +191,29 @@
        (:desc "show todo tree" :g "zt" #'org-show-todo-tree)
        (:desc "edit editor configure" :g "zf" #'magit-pull-from-upstream)
        (:desc "exit emacs" :g "zz" #'kill-emacs)
-
        (:desc "insert todo" :g "3" #'todo-insert )
+
+       ;;SPC h
+       (:g "hf" #'describe-function)
+       (:g "hv" #'describe-variable)
+       (:g "hk" #'find-function-on-key)
+
+       ;;SPC o
+       (:desc "org item right" :g "ol" #'org-demote-subtree)
+       (:desc "org item left" :g "oh" #'org-promote-subtree)
+       (:desc "org item down" :g "oj" #'outline-move-subtree-down)
+       (:desc "org item up" :g "ok" #'outline-move-subtree-up)
+
        ;;SPC i
        (:desc "insert checkbox" :g "ic" #'checkbox-insert )
        (:desc "insert todo" :g "it" #'todo-insert )
        (:desc "insert now time" :g "in" #'insert-now-time )
        (:desc "insert now schedule" :g "id" #'insert-now-schedule)
+       (:desc "insert heading" :g "ih" #'org-insert-heading-respect-content)
        ;;SPC SPC
        (:desc "find file" :g "SPC" #'projectile-find-file)
+       ;;SPC gg
+       (:desc "magit-status" :g "gg" #'magit-status)
        ))
 ;;(async-shell-command-no-window "git -C ~/work pull")
 ;; Here are some additional functions/macros that could help you configure Doom:
