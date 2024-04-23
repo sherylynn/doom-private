@@ -182,16 +182,23 @@
        (:desc "toggle rime show" :g "ts" #'toggle-rime-show-candidate)
        (:desc "turn on rime input method" :g "ti" #'set-input-method-rime)
        (:desc "exec" :g "x" #'execute-extended-command)
+       ;;SPC z
        (:desc "edit editor configure" :g "ze" #'configure-emacs)
        (:desc "edit org mode file" :g "zo"
               (cmd! (find-file "~/work/todo.org")))
        (:desc "reload editor configure" :g "zr" #'doom/reload)
        (:desc "show todo tree" :g "zt" #'org-show-todo-tree)
        (:desc "edit editor configure" :g "zf" #'magit-pull-from-upstream)
+       (:desc "exit emacs" :g "zz" #'kill-emacs)
+
        (:desc "insert todo" :g "3" #'todo-insert )
+       ;;SPC i
        (:desc "insert checkbox" :g "ic" #'checkbox-insert )
        (:desc "insert todo" :g "it" #'todo-insert )
        (:desc "insert now time" :g "in" #'insert-now-time )
+       (:desc "insert now schedule" :g "id" #'insert-now-schedule)
+       ;;SPC SPC
+       (:desc "find file" :g "SPC" #'projectile-find-file)
        ))
 ;;(async-shell-command-no-window "git -C ~/work pull")
 ;; Here are some additional functions/macros that could help you configure Doom:
